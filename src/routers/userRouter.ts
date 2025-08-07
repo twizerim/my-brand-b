@@ -10,7 +10,7 @@ router.delete("/",UserController.deleteUser)
 router.delete("/:id",UserController.deleteUser)
 router.post("/signUp",DatorChecker.userExist,Validation.userAccountRole(),Validation.inputValidator,UserController.signUp)
 router.get("/:id", UserController.getUsers);
-router.get("/users", UserController.getUsers);
+router.get("/", UserController.getUsers);
 
 
 export default router

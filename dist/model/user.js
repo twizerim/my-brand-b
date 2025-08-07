@@ -54,13 +54,21 @@ const UserSchema = new mongoose_1.Schema({
         required: true,
         unique: true,
     },
+    image: {
+        type: String,
+        default: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
     password: {
         type: String,
         required: true,
     },
+    confirmPassword: {
+        type: String,
+        required: false
+    },
     role: {
         type: String,
-        enum: Object.values(Role), // Ensures only "user" or "admin"
+        enum: Object.values(Role),
         default: Role.USER,
     },
 });
